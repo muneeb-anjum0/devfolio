@@ -1,0 +1,9 @@
+<svg width="88" height="48" viewBox="0 0 88 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blueGreenGradient" x1="0" y1="0" x2="88" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1e3a8a" /> <!-- Darker blue -->
+      <stop offset="1" stop-color="#059669" /> <!-- Emerald green -->
+    </linearGradient>
+  </defs>
+  <text x="12" y="38" font-family="monospace, 'Fira Mono', 'JetBrains Mono', 'Menlo', 'Consolas', 'Liberation Mono', 'Courier New', monospace" font-size="44" font-weight="bold" fill="url(#blueGreenGradient)">&gt;_</text>
+</svg>

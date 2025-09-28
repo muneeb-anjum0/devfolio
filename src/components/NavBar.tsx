@@ -9,8 +9,9 @@ interface NavbarProps {
 
 export default function Navbar({ currentSection }: NavbarProps) {
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
+  const [showNavbar, setShowNavbar] = useState(true);
   const navRef = useRef<HTMLElement>(null)
+  const lastScrollY = useRef(0);
   // Prevent background scroll when mobile menu is open
   useEffect(() => {
     if (mobileOpen) {
@@ -25,13 +26,32 @@ export default function Navbar({ currentSection }: NavbarProps) {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 50
-      setScrolled(isScrolled)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+      // Only apply scroll hide/show on mobile (width < 1024px)
+      if (window.innerWidth >= 1024) {
+        setShowNavbar(true);
+        return;
+      }
+      const currentScrollY = window.scrollY;
+      if (currentScrollY <= 0) {
+        setShowNavbar(true);
+      } else if (currentScrollY > lastScrollY.current && currentScrollY > 50) {
+        // Scrolling down
+        setShowNavbar(false);
+      } else if (currentScrollY < lastScrollY.current) {
+        // Scrolling up
+        setShowNavbar(true);
+      }
+      lastScrollY.current = currentScrollY;
+    };
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll); // update on resize
+    // Set initial state
+    handleScroll();
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -73,11 +93,12 @@ export default function Navbar({ currentSection }: NavbarProps) {
   return (
     <nav
       ref={navRef}
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 select-none
-        ${scrolled
-          ? 'bg-black/30 border-b border-black backdrop-blur-lg'
-          : 'bg-transparent border-b border-transparent'}
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 select-none border-b border-transparent
+        ${showNavbar ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}
+        bg-transparent
+  lg:bg-black/0 lg:backdrop-blur-md lg:border-b lg:border-black/30
       `}
+      style={{ pointerEvents: showNavbar ? 'auto' : 'none' }}
     >
       {/* Terminal-style navbar container */}
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 relative">

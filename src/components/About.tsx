@@ -96,7 +96,7 @@ const About = () => {
                 <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" style={{ animationDelay: '0.6s' }}></span>
               </span>
               <span className="ml-2 font-mono text-[10px] text-gray-400 tracking-widest uppercase letter-spacing-2">ABOUT ME</span>
-              <span className="ml-auto font-mono text-[10px] text-green-400">ACTIVE</span>
+              <span className="ml-auto font-mono text-[10px] text-blue-400 font-bold">ACTIVE</span>
             </div>
             <div className="relative z-20 px-2 pt-1 pb-3 flex flex-col gap-2 transition-all duration-500">
               <div className="font-mono text-[15px] flex items-center gap-1 text-green-400 mb-0 pb-0 whitespace-nowrap">
@@ -111,53 +111,18 @@ const About = () => {
               <div className="flex flex-col gap-2 mt-1">
                 <div className="bg-black/80 border border-gray-800 rounded-lg p-2 shadow-inner">
                   <div className="font-mono text-[10px] text-gray-400 mb-1">// Details</div>
-                  <div className="font-mono text-[11px] text-gray-200 flex items-center gap-1">
-                    <span className="text-green-400">┌─</span>
-                    <span>Location: <span className="text-cyan-300 font-medium">Islamabad, Pakistan</span></span>
-                  </div>
-                  <div className="font-mono text-[11px] text-gray-200 flex items-center gap-1">
-                    <span className="text-green-400">├─</span>
-                    <span>University: <span className="text-blue-300 font-medium">SZABIST</span></span>
-                  </div>
-                  <div className="font-mono text-[11px] text-gray-200 flex items-center gap-1">
-                    <span className="text-green-400">├─</span>
-                    <span>Focus: <span className="text-purple-300 font-medium">.NET Framework</span></span>
-                  </div>
-                  <div className="font-mono text-[10px] text-gray-200 flex items-center gap-1">
-                    <span className="text-green-400">└─</span>
-                    <span>Status: <span className="text-green-300 font-medium animate-statuspulse">AVAILABLE</span></span>
-                  </div>
+                  <div className="font-mono text-[11px] text-gray-200 flex items-start mb-1"><span className="text-green-400 min-w-[1.5em]">┌─</span><span className="pl-1"><span className="inline-block border border-blue-400 text-gray-300 rounded px-1 mr-1 align-middle group-hover:border-gray-400 group-hover:text-blue-400">Location</span>: <span className="text-cyan-300 font-medium">Islamabad, Pakistan</span></span></div>
+                  <div className="font-mono text-[11px] text-gray-200 flex items-start mb-1"><span className="text-green-400 min-w-[1.5em]">├─</span><span className="pl-1"><span className="inline-block border border-blue-400 text-gray-300 rounded px-1 mr-1 align-middle group-hover:border-gray-400 group-hover:text-blue-400">University</span>: <span className="text-blue-300 font-medium">SZABIST</span></span></div>
+                  <div className="font-mono text-[11px] text-gray-200 flex items-start mb-1"><span className="text-green-400 min-w-[1.5em]">├─</span><span className="pl-1"><span className="inline-block border border-blue-400 text-gray-300 rounded px-1 mr-1 align-middle group-hover:border-gray-400 group-hover:text-blue-400">Focus</span>: <span className="text-purple-300 font-medium">.NET Framework</span></span></div>
+                  <div className="font-mono text-[10px] text-gray-200 flex items-start mb-1"><span className="text-green-400 min-w-[1.5em]">└─</span><span className="pl-1"><span className="inline-block border border-blue-400 text-gray-300 rounded px-1 mr-1 align-middle group-hover:border-gray-400 group-hover:text-blue-400">Status</span>: <span className="text-green-300 font-medium animate-statuspulse">AVAILABLE</span></span></div>
                 </div>
                 <div className="bg-black/80 border border-gray-800 rounded-lg p-2 shadow-inner">
                   <div className="font-mono text-[10px] text-gray-400 mb-1">// Experience</div>
-                  <div className="font-mono text-[11px] text-gray-400 flex items-center gap-1">
-                    <span className="text-green-400">┌─</span>
-                    <span>Experience: <span className="text-yellow-400 font-medium">1+ years</span></span>
-                  </div>
-                  <div className="font-mono text-[11px] text-gray-400 flex items-center gap-1">
-                    <span className="text-green-400">├─</span>
-                    <span>Current Role: <span className="text-green-300 font-medium">Backend Developer Intern at App In Snap PVT Limited</span></span>
-                  </div>
-                  <div className="font-mono text-[11px] text-gray-400 flex items-center gap-1">
-                    <span className="text-green-400">├─</span>
-                    <span>Tech Stack: <span className="text-cyan-300 font-medium">.NET, ASP.NET MVC, C#, React, TypeScript, Tailwind CSS, AI Integration</span></span>
-                  </div>
-                  <div className="font-mono text-[11px] text-gray-400 flex items-center gap-1">
-                    <span className="text-green-400">├─</span>
-                    <span>Passion: <span className="text-gray-100 leading-relaxed">Fullstack development, AI-powered solutions, robust backend & intuitive frontend.</span></span>
-                  </div>
-                  <div className="font-mono text-[11px] text-gray-400 flex items-center gap-1">
-                    <span className="text-green-400">├─</span>
-                    <span>Philosophy: <span className="text-green-300 font-medium">Always learning, always building...</span></span>
-                  </div>
-                  <div className="font-mono text-[10px] text-gray-400 flex items-center gap-1">
-                    <span className="text-green-400">└─</span>
-                    <span>Projects: 
-                      <a href="#projects" className="text-gray-200 hover:text-green-400 cursor-pointer transition-colors duration-200">sorting-visualizer/</a>,
-                      <a href="#projects" className="text-gray-200 hover:text-green-400 cursor-pointer transition-colors duration-200"> ai-pay-solutions/</a>,
-                      <a href="#projects" className="text-gray-200 hover:text-green-400 cursor-pointer transition-colors duration-200"> portfolio-website/</a>
-                    </span>
-                  </div>
+                  <div className="font-mono text-[11px] text-gray-400 flex items-start mb-1"><span className="text-green-400 min-w-[1.5em]">┌─</span><span className="pl-1"><span className="inline-block border border-blue-400 text-gray-300 rounded px-1 mr-1 align-middle group-hover:border-gray-400 group-hover:text-blue-400">Experience</span>: <span className="text-yellow-400 font-medium">1+ years</span></span></div>
+                  <div className="font-mono text-[11px] text-gray-400 flex items-start mb-1"><span className="text-green-400 min-w-[1.5em]">├─</span><span className="pl-1"><span className="inline-block border border-blue-400 text-gray-300 rounded px-1 mr-1 align-middle group-hover:border-gray-400 group-hover:text-blue-400">Current Role</span>: <span className="text-green-300 font-medium">Backend Developer Intern at App In Snap PVT Limited</span></span></div>
+                  <div className="font-mono text-[11px] text-gray-400 flex items-start mb-1"><span className="text-green-400 min-w-[1.5em]">├─</span><span className="pl-1"><span className="inline-block border border-blue-400 text-gray-300 rounded px-1 mr-1 align-middle group-hover:border-gray-400 group-hover:text-blue-400">Tech Stack</span>: <span className="text-cyan-300 font-medium">.NET, ASP.NET MVC, C#, React, TypeScript, Tailwind CSS, AI Integration</span></span></div>
+                  <div className="font-mono text-[11px] text-gray-400 flex items-start mb-1"><span className="text-green-400 min-w-[1.5em]">├─</span><span className="pl-1"><span className="inline-block border border-blue-400 text-gray-300 rounded px-1 mr-1 align-middle group-hover:border-gray-400 group-hover:text-blue-400">Passion</span>: <span className="text-gray-100 leading-relaxed">Fullstack development, AI-powered solutions, robust backend & intuitive frontend.</span></span></div>
+                  <div className="font-mono text-[11px] text-gray-400 flex items-start mb-1"><span className="text-green-400 min-w-[1.5em]">├─</span><span className="pl-1"><span className="inline-block border border-blue-400 text-gray-300 rounded px-1 mr-1 align-middle group-hover:border-gray-400 group-hover:text-blue-400">Philosophy</span>: <span className="text-green-300 font-medium">Always learning, always building...</span></span></div>
                 </div>
               </div>
             </div>
@@ -246,7 +211,7 @@ const About = () => {
                   <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" style={{ animationDelay: '0.6s' }}></span>
                 </span>
                 <span className="ml-3 font-mono text-xs text-gray-400 tracking-widest uppercase letter-spacing-2">ABOUT ME</span>
-                <span className="ml-auto font-mono text-xs text-green-400">ACTIVE</span>
+                <span className="ml-auto font-mono text-xs text-blue-400 font-bold">ACTIVE</span>
               </div>
 
               {/* Content area with two columns */}

@@ -122,10 +122,11 @@ const terminalLines = [
 ]
 
 const roles = [
-  'Full-Stack Developer',
-  'Digital Architect',
-  'Problem Solver',
-  'Code Craftsman',
+  'MERN Stack Developer',
+  '.NET Enthusiast',
+  'UI/UX Implementation Specialist',
+  'Turning Designs into Reality',
+  'Full-Stack Problem Solver',
 ]
 
 export default function Hero() {
@@ -166,7 +167,7 @@ export default function Hero() {
   // Removed unused particleCount effect
 
   return (
-    <section id="home" className="relative h-[75vh] md:min-h-screen overflow-hidden bg-black text-white select-none">
+  <section id="home" className="relative min-h-[90vh] h-auto md:h-[75vh] md:min-h-screen overflow-hidden bg-black text-white select-none pt-24 sm:pt-0">
       {/* Atmospheric background elements */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         {/* Wind effect: drifting subtle dots */}
@@ -208,9 +209,9 @@ export default function Hero() {
       </div>
 
   {/* MAIN TERMINAL WINDOW */}
-  <div className="relative z-10 flex flex-col items-center justify-center h-full px-1 sm:px-3 lg:px-4 py-2 md:py-0 md:min-h-[60vh]">
+  <div className="relative z-10 flex flex-col items-center justify-center h-full px-1 sm:px-3 lg:px-4 py-2 md:py-0 md:min-h-[60vh] pt-24 sm:pt-0">
     {/* Terminal Window Header */}
-  <div className="w-full max-w-xs sm:max-w-md md:max-w-xl mb-3 sm:mb-6 md:mb-8 lg:mb-10 transform hover:scale-105 transition-transform duration-300 group">
+  <div className="hidden sm:block w-full max-w-xs sm:max-w-md md:max-w-xl mb-3 sm:mb-6 md:mb-8 lg:mb-10 transform hover:scale-105 transition-transform duration-300 group">
           <div className="bg-black rounded-t-lg px-2 sm:px-3 py-1 flex items-center gap-1 border border-black group-hover:border-gray-800 transition-colors duration-300 relative overflow-hidden">
             {/* Subtle animated background on hover */}
             <div className="absolute inset-0 bg-black opacity-80"></div>

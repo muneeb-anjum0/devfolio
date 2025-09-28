@@ -186,22 +186,26 @@ const Education: React.FC = () => {
                     <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" style={{ animationDelay: '0.6s' }}></span>
                   </span>
                   <span className="ml-2 font-mono text-[10px] text-gray-400 tracking-widest uppercase letter-spacing-2">{edu.status} EDUCATION</span>
-                  <span className="ml-auto font-mono text-[10px] text-gray-600">{edu.duration}</span>
+                  <span className="ml-auto font-mono text-[10px] text-blue-400 font-bold">{edu.duration}</span>
                 </div>
                 <div className="relative z-20 px-2 pt-1 pb-3 flex flex-col gap-2 transition-all duration-500">
-                  <div className="font-mono text-[15px] flex items-center gap-1 text-blue-400 mb-0 pb-0 whitespace-nowrap">
-                    <span className="select-none">$</span>
-                    <span className="text-white font-bold">{edu.degree}</span>
-                    <span className="text-gray-400 font-bold"> | </span>
-                    <span className="text-blue-300 font-bold">{edu.university}</span>
+                  <div className="font-mono text-base md:text-lg flex flex-col md:flex-row md:items-center gap-0 md:gap-1 text-blue-400 mb-0 pb-0 md:pt-2">
+                    <div className="flex items-center gap-1">
+                      <span className="select-none">$</span>
+                      <span className="text-white font-bold">{edu.degree}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <span className="text-gray-400 font-bold hidden md:inline"> | </span>
+                      <span className="text-blue-300 font-bold">{edu.university}</span>
+                    </div>
                   </div>
-                  <div className="font-mono text-[11px] flex items-center gap-1 mb-1">
+                  <div className="font-mono text-xs md:text-sm flex items-center gap-1 mb-1">
                     <span className="italic text-blue-400">cat </span>
                     <span className="italic text-green-400">education.json</span>
                     <span className="font-bold text-blue-300">'Learning in progress!'</span>
                   </div>
                   <div className="bg-black/80 border border-gray-800 rounded-lg p-2 shadow-inner">
-                    <div className="font-mono text-[10px] text-gray-400 mb-1">// Key Details</div>
+                    <div className="font-mono text-[10px] md:text-xs text-gray-400 mb-1">// Key Details</div>
                     <ul className="space-y-1">
                       {edu.details.map((detail, i) => {
                         let symbol = '├─';
@@ -210,7 +214,7 @@ const Education: React.FC = () => {
                         return (
                           <li
                             key={i}
-                            className="font-mono text-[11px] text-gray-200 flex items-start gap-1 group-hover:text-blue-300 transition-colors duration-200"
+                            className="font-mono text-xs md:text-sm text-gray-200 flex items-start gap-1 group-hover:text-blue-300 transition-colors duration-200"
                           >
                             <span className="text-blue-400 select-none group-hover:text-green-400 transition-colors duration-200">{symbol}</span>
                             <span>{detail}</span>
@@ -255,13 +259,13 @@ const Education: React.FC = () => {
                     <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" style={{ animationDelay: '0.6s' }}></span>
                   </span>
                   <span className="ml-3 font-mono text-xs text-gray-400 tracking-widest uppercase letter-spacing-2">{edu.status} EDUCATION</span>
-                  <span className="ml-auto font-mono text-xs text-gray-600">{edu.duration}</span>
+                  <span className="ml-auto font-mono text-xs text-blue-400 font-bold">{edu.duration}</span>
                 </div>
 
                 {/* Redesigned content area */}
                 <div className="relative z-20 px-8 pt-1 pb-8 flex flex-col gap-3 transition-all duration-500">
                   {/* Degree and University as a terminal command */}
-                  <div className="font-mono text-lg md:text-xl flex items-center gap-2 text-blue-400 mb-0 pb-0">
+                  <div className="font-mono text-lg md:text-xl flex items-center gap-2 text-blue-400 mb-0 pb-0 pt-2">
                     <span className="select-none">$</span>
                     <span className="text-white font-bold">{edu.degree}</span>
                     <span className="text-gray-400 font-bold"> | </span>

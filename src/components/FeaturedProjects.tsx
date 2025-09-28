@@ -3,9 +3,30 @@ import React, { useEffect, useMemo, useState, useCallback } from 'react'
 // Project portfolio data
 const projects = [
   {
+    title: 'Match-Three',
+    subtitle: 'Open Source Project (~72 hours)',
+    date: 'Feb 2023 – May 2023',
+  tag: 'C++ & SFML Match-3 Puzzle Game',
+    description:
+      'A feature-rich Match-3 puzzle game built with modern C++ and SFML, showcasing advanced game mechanics, polished UI/UX, and robust code structure.',
+    achievements: [
+      'Built a dynamic tile grid with smooth swap, match, and cascade effects',
+      'Designed multiple game modes and a rewarding level progression system',
+      'Crafted interactive menus and mouse-driven controls for seamless play',
+      'Integrated rich sound, animation, and visual feedback for polish',
+      'Managed assets and memory for a robust, replayable experience',
+    ],
+    techStack: [
+      'C++',
+      'SFML',
+      'Game Design',
+    ],
+  link: 'https://github.com/muneeb-anjum0/Match-Three',
+  },
+  {
     title: 'Sorting Visualizer',
     subtitle: 'Open Source Project (~40 hours)',
-    date: 'February 2025 – April 2025',
+    date: 'feb 2025 – Apr 2025',
     tag: 'Visualizing algorithms in action',
     description:
       'Made a C++ and OpenGL based desktop Application allowing users to See how the alogrithms they use in their daily life actually sort a given list of xyz things.',
@@ -16,12 +37,12 @@ const projects = [
       'Used C++ as main brain to this application to implement various algorithms like Bubble Sort, Selection Sort, Merge Sort, Quick Sort, Heap Sort and many more',
     ],
     techStack: ['C++', 'OpenGL', 'ImGui', 'GLFW'],
-    link: '#',
+  link: 'https://github.com/muneeb-anjum0/SortingVisualizer',
   },
   {
     title: 'Mazer Runner',
     subtitle: 'Open Source Project (~30 hours)',
-    date: 'February 2025 – April 2025',
+    date: 'Feb 2025 – Apr 2025',
     tag: 'Maze generation and solving',
     description:
       'Built Mazer Runner, a maze generation and solving application using C++ and OpenGL.',
@@ -33,8 +54,9 @@ const projects = [
       'Created a Maze using A* algorithm and find the shortest path through the maze using BFS and DFS algorithms',
     ],
     techStack: ['C++', 'OpenGL', 'ImGui', 'GLFW'],
-    link: '#',
+  link: 'https://github.com/muneeb-anjum0/Path-Finder',
   },
+  
 ]
 
 // Reusable project card component
@@ -55,24 +77,26 @@ const cardMarkup = (p: typeof projects[number]) => (
         <span className="w-2 h-2 rounded-full bg-yellow-400 animate-pulse" style={{ animationDelay: '0.3s' }}></span>
         <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" style={{ animationDelay: '0.6s' }}></span>
       </span>
-      <span className="ml-3 font-mono text-xs text-gray-400 tracking-widest uppercase">ACTIVE PROJECT</span>
-      <span className="ml-auto font-mono text-xs text-gray-600">{p.date}</span>
+  <span className="ml-3 font-mono text-[10px] text-gray-400 tracking-widest uppercase">ACTIVE PROJECT</span>
+  <span className="ml-auto font-mono text-xs text-blue-400 font-bold">{p.date}</span>
     </div>
 
     {/* Content */}
     <div className="relative z-20 flex flex-col gap-2 px-6 pt-4 pb-6 transition-all duration-500">
-      <div className="font-mono text-xl md:text-2xl flex items-center gap-2 text-green-400">
-        <span className="select-none">$</span>
+  <div className="font-mono text-base md:text-2xl md:text-2xl text-green-400">
+      <span className="select-none">$&nbsp;</span>
         <span className="text-white font-bold">{p.title}</span>
         <span className="text-gray-400 font-bold"> | </span>
         <span className="text-blue-400 font-bold">{p.tag}</span>
       </div>
-      <div className="font-mono text-sm text-gray-400">{p.subtitle}</div>
-      <div className="text-gray-300 text-base font-mono mt-1 line-clamp-2">{p.description}</div>
-      <ul className="font-mono text-sm text-blue-300 mt-1 space-y-1">
-        {p.achievements.slice(0, 2).map((detail, i) => (
+        <div className="font-mono text-xs md:text-sm text-gray-400">{p.subtitle}</div>
+        <div className="text-gray-300 text-xs md:text-sm font-mono mt-1 line-clamp-2">{p.description}</div>
+        <ul className="font-mono text-xs md:text-sm text-blue-300 mt-1 space-y-1">
+        {p.achievements.map((detail, i) => (
           <li key={i} className="flex items-start gap-2">
-            <span className="text-green-400 select-none">{i === 0 ? '┌─' : '└─'}</span>
+            <span className="text-green-400 select-none">
+              {i === 0 ? '┌─' : i === p.achievements.length - 1 ? '└─' : '├─'}
+            </span>
             <span>{detail}</span>
           </li>
         ))}

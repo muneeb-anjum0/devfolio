@@ -11,7 +11,7 @@ const experiences = [
     cpu: '57.5%',
     memory: '182MB',
     details: [
-      'Developed and deployed scalable web apps using the MERN stack (MongoDB, Express, React, Node.js)',
+      'Developed and deployed scalable web apps using the MERN stack',
       'Integrated Supabase and Firebase/Firestore for real-time data and authentication',
       'Containerized full-stack applications with Docker for seamless deployment',
       'Implemented secure JWT token authentication for user sessions',
@@ -22,10 +22,10 @@ const experiences = [
   {
     title: 'Backend Dev Intern',
     company: 'App In Snap',
-    date: 'June 2025 – Present',
+    date: 'June 2025 – September 2025',
     status: 'ACTIVE',
     pid: '2025',
-    cpu: '89.2%',
+    cpu: '100%',
     memory: '245MB',
     details: [
       'Secured ASP.NET Core with Identity & JWT (−30% unauthorized access)',
@@ -56,7 +56,7 @@ const ExperienceCard = (exp: typeof experiences[number], now: Date) => (
         <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-red-500 animate-pulse" style={{ animationDelay: '0.6s' }}></span>
       </span>
       <span className="ml-2 md:ml-3 font-mono text-[10px] md:text-xs text-gray-400 tracking-widest uppercase">{exp.status} EXPERIENCE</span>
-      <span className="ml-auto font-mono text-[10px] md:text-xs text-gray-600">{exp.date}</span>
+  <span className="ml-auto font-mono text-[10px] md:text-xs text-blue-400 font-bold">{exp.date}</span>
     </div>
 
     {/* Content */}
