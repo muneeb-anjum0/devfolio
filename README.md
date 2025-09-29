@@ -6,7 +6,7 @@ A modern, interactive developer portfolio built with React, TypeScript, and Tail
 
 ## 🚀 Live Website
 
-[Website Link](https://muneeb-anjum.vercel.app)
+[muneeb-anjum.vercel.app](https://muneeb-anjum.vercel.app)
 
 ---
 
