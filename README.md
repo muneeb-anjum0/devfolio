@@ -1,4 +1,4 @@
-# Muneeb Anjum — Portfolio Website
+# legacy Portfolio Website
 
 A modern, interactive developer portfolio built with React, TypeScript, and Tailwind CSS. Showcases projects, skills, experience, and education in a terminal-inspired, animated UI.
 
